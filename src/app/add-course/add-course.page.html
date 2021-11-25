@@ -1,9 +1,25 @@
 <ion-header>
-  <ion-toolbar>
-    <ion-title>add-course</ion-title>
+  <ion-toolbar color="primary">
+    <ion-title>Add a course</ion-title>
   </ion-toolbar>
 </ion-header>
 
 <ion-content>
+  <div class="ion-margin">
+    <form #f="ngForm" (ngSubmit)="onSubmit(f)">
+      <label for="t">Title</label>
+      <input ngModel type="text" class="form-control" id="t" name="title">
+      <label for="author">Author</label>
+      <input ngModel type="text" class="form-control" id="author" name="author">
+      <label for="image">Image</label>
+      <input ngModel type="text" class="form-control" id="image" name="image">
+      <label for="keywords">Keywords</label>
+      <input ngModel type="text" class="form-control" id="keywords" name="keywords">
+
+      <ion-button type="submit" expand="block">Add</ion-button>
+    </form>
+  </div>
+
+
 
 </ion-content>
